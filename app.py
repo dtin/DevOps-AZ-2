@@ -34,13 +34,10 @@ def predict():
         # clf = joblib.load("./Housing_price_model/GradientBoostingRegressor.joblib")
     except FileNotFoundError as e:
         LOG.error("Model file not found: %s", str(e))
-        return "Model not found", 404
-    except joblib.JoblibException as e:
-        LOG.error("Joblib-related error: %s", str(e))
-        return "Model loading error", 500
-    except Exception as e:
-        LOG.error("Unexpected error occurred: %s", str(e))
-        return "Unexpected error", 500
+        return "Model file not found", 404
+    except OSError as e:
+        LOG.error("OS error during model loading: %s", str(e))
+        return "Error loading the model", 500
 
     json_payload = request.json
     LOG.info("JSON payload: %s json_payload")
