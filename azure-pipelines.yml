@@ -35,7 +35,12 @@ stages:
       inputs:
         versionSpec: '$(pythonVersion)'
       displayName: 'Use Python $(pythonVersion)'
-    
+      
+     - script: |
+        sudo apt-get update
+        sudo apt-get install python3.10 python3.10-venv python3.10-dev
+      displayName: 'Install Python 3.10'
+      
     - script: |
         python -m venv vtenv
         source vtenv/bin/activate
