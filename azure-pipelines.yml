@@ -36,7 +36,7 @@ stages:
         versionSpec: '$(pythonVersion)'
       displayName: 'Use Python $(pythonVersion)'
       
-     - script: |
+    - script: |
         sudo apt-get update
         sudo apt-get install python3.10 python3.10-venv python3.10-dev
       displayName: 'Install Python 3.10'
@@ -49,7 +49,7 @@ stages:
       workingDirectory: $(projectRoot)
       displayName: "Install requirements"
 
-    - task: ArchiveFiles@1
+    - task: ArchiveFiles@2
       displayName: 'Archive files'
       inputs:
         rootFolderOrFile: '$(projectRoot)'
