@@ -21,9 +21,6 @@ variables:
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)
   
-  # Python version: 3.10
-  pythonVersion: '3.10'
-
 stages:
 - stage: Build
   displayName: Build stage
@@ -31,11 +28,6 @@ stages:
   - job: BuildJob
     pool: myAgentPool
     steps:
-    - task: UsePythonVersion@0
-      inputs:
-        versionSpec: '$(pythonVersion)'
-      displayName: 'Use Python $(pythonVersion)'
-      
     - script: |
         sudo apt-get update
         sudo apt-get install python3.10 python3.10-venv python3.10-dev
@@ -74,11 +66,6 @@ stages:
       runOnce:
         deploy:
           steps:
-          - task: UsePythonVersion@0
-            inputs:
-              versionSpec: '$(pythonVersion)'
-            displayName: 'Use Python version'
-
           - task: AzureWebApp@1
             displayName: 'Deploy Azure Web App : flask-ml-228668'
             inputs:
