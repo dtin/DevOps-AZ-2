@@ -1,12 +1,22 @@
 # Overview
 [![Python application test with Github Actions](https://github.com/dtin/DevOps-AZ-2/actions/workflows/pythonapp.yml/badge.svg?branch=master)](https://github.com/dtin/DevOps-AZ-2/actions/workflows/pythonapp.yml)
-<TODO: complete this with an overview of your project>
+
+
+In this project, we will create a GitHub repository from scratch and establish a framework for both Continuous Integration (CI) and Continuous Delivery (CD).
+
+We will use GitHub Actions along with a Makefile, requirements.txt, and application code to run initial checks, tests, and installations. We will also connect Azure Pipelines to allow Continuous Delivery to Azure App Service. The project will use Azure Cloud Shell as well.
 
 ## Project Plan
-<TODO: Project Plan
+Trello Board
+https://trello.com/b/rqmyeBlG/project-2-sprint-board
 
-* A link to a Trello board for the project
-* A link to a spreadsheet that includes the original and final project plan>
+Original Plan
+https://docs.google.com/spreadsheets/d/11w04z5g5CMs7g_lvFfPv23Uvaczb8iA6/edit?usp=sharing&ouid=109032874588359911580&rtpof=true&sd=true
+
+Final Plan
+https://docs.google.com/spreadsheets/d/1wcakM6U3c7ssLOHxj1NcN6v9_Fe89Jmk/edit?usp=sharing&ouid=109032874588359911580&rtpof=true&sd=true
+
+
 
 ## Instructions
 
@@ -42,10 +52,11 @@ Port: 443
 
 ## Enhancements
 
-<TODO: A short description of how to improve the project in the future>
+- Create a UI application for user to easy interact with data
+- Research and add more datasets to improve the quality of the result
 
 ## Demo 
 
-<TODO: Add link Screencast on YouTube>
+https://youtu.be/2lRPKkXGqf8
 
 
